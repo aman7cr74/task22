@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Import Products</h1>
+    <div class="form-container">
+        <form action="#">
+            <h2>Step 1: Select File</h2>
+            <input type="file" id="file" accept=".csv,.json">
+            <br><br>
+            <h2>Step 2: Specify Format</h2>
+            <label for="fileType">File Type:</label>
+            <select id="fileType">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+            <br><br>
+            <label for="charset">Character Encoding:</label>
+            <select id="charset">
+                <option value="utf-8">UTF-8</option>
+                <option value="utf-16">UTF-16</option>
+            </select>
+            <br><br>
+            <label for="delimiter">Delimiter:</label>
+            <select id="delimiter">
+                <option value="comma">Comma</option>
+                <option value="tab">Tab</option>
+            </select>
+            <br><br>
+            <label for="header">Has Header:</label>
+            <input type="checkbox" id="header">
+            <br><br>
+            <h2>Step 3: Display Handling</h2>
+            <label for="fields">Select the fields to be displayed:</label>
+            <select id="fields" multiple>
+                <option value="productId">Product Id</option>
+                <option value="subcategory">Subcategory</option>
+                <option value="title">Title</option>
+                <option value="price">Price</option>
+                <option value="popularity">Popularity</option>
+                <option value="description">Description</option>
+                <option value="rating">Rating</option>
+                <option value="utmSource">UTM Source</option>
+                <option value="utmMedium">UTM Medium</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Import Products">
+            <input type="reset" value="Cancel">
+        </form>
+    </div>
+</body>
+</html>
